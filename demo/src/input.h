@@ -14,8 +14,8 @@
 
 #include <cstdint>
 
-uint32_t DoMath(uint32_t a);
-
-uint32_t DoMath(uint32_t a) {
-    return a * 3;
+uint32_t factorial(uint32_t n) {
+    if(n <= 1)
+        return 1;
+    return n * factorial(n - 1);
 }

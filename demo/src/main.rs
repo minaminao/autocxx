@@ -12,14 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 use autocxx_macro::include_cxx;
 
-include_cxx!(
-    Header("input.h"),
-    Allow("DoMath"),
-);
+include_cxx!(Header("input.h"), Allow("factorial"),);
 
 fn main() {
-    println!("Hello, world! - C++ math should say 12={}", ffi::DoMath(4));
+    println!("10!={}", ffi::factorial(10));
 }
